@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarBook.Domain.Entities
 {
-	public class CarFeatures
+	public class CarFeature
 	{
 		public int CarFeatureID { get; set; }
 		public int CarID { get; set; }
