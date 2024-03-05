@@ -1,12 +1,14 @@
-﻿using System;
+﻿using CarBook.Application.Interfaces;
+using CarBook.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Domain.Entities
+namespace CarBook.Application.Features.CQRS.Results.BannerResults
 {
-	public class Banner
+	public class GetBannerByIdQueryResult
 	{
 		public int BannerID { get; set; }
 		public string Title { get; set; }
