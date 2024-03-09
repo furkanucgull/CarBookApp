@@ -1,14 +1,7 @@
-﻿using CarBook.Application.Features.CQRS.Handlers.AboutHandlers;
-using CarBook.Application.Features.CQRS.Queries.BannerQueries;
-using CarBook.Application.Features.CQRS.Results.AboutResults;
+﻿using CarBook.Application.Features.CQRS.Queries.BannerQueries;
 using CarBook.Application.Features.CQRS.Results.BannerResults;
 using CarBook.Application.Interfaces;
 using CarBook.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarBook.Application.Features.CQRS.Handlers.BannerHandlers
 {
@@ -20,7 +13,7 @@ namespace CarBook.Application.Features.CQRS.Handlers.BannerHandlers
 		{
 			_repository = repository;
 		}
-		public async Task<GetBannerByIdQueryResult>Handle(GetBannerByIdQuery query)
+		public async Task<GetBannerByIdQueryResult> Handle(GetBannerByIdQuery query)
 		{
 			var values = await _repository.GetByIdAsync(query.Id);
 			return new GetBannerByIdQueryResult
