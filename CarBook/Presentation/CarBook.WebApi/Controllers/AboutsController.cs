@@ -10,13 +10,13 @@ namespace CarBook.WebApi.Controllers
 	[ApiController]
 	public class AboutsController : ControllerBase
 	{
-		private readonly CreatAboutCommandHandler _createAboutCommandHandler;
+		private readonly CreateAboutCommandHandler _createAboutCommandHandler;
 		private readonly GetAboutByIdQueryHandler _getAboutByIdQueryHandler;
 		private readonly GetAboutQueryHandler _getAboutQueryHandler;
 		private readonly UpdateAboutCommandHandler _updateAboutCommandHandler;
 		private readonly RemoveAboutCommandHandler _removeAboutCommandHandler;
 
-		public AboutsController(CreatAboutCommandHandler createAboutCommandHandler, GetAboutByIdQueryHandler getAboutByIdQueryHandler, GetAboutQueryHandler getAboutQueryHandler, UpdateAboutCommandHandler updateAboutCommandHandler, RemoveAboutCommandHandler removeAboutCommandHandler)
+		public AboutsController(CreateAboutCommandHandler createAboutCommandHandler, GetAboutByIdQueryHandler getAboutByIdQueryHandler, GetAboutQueryHandler getAboutQueryHandler, UpdateAboutCommandHandler updateAboutCommandHandler, RemoveAboutCommandHandler removeAboutCommandHandler)
 		{
 			_createAboutCommandHandler = createAboutCommandHandler;
 			_getAboutByIdQueryHandler = getAboutByIdQueryHandler;
