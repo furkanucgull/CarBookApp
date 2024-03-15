@@ -6,6 +6,7 @@ using CarBook.Application.Features.CQRS.Handlers.CategoryHandlers;
 using CarBook.Application.Features.CQRS.Handlers.ContactHandlers;
 using CarBook.Application.Interfaces;
 using CarBook.Application.Interfaces.CarInterfaces;
+using CarBook.Application.Services;
 using CarBook.Persistance.Context;
 using CarBook.Persistance.Repositories;
 using CarBook.Persistance.Repositories.CarRepositories;
@@ -56,7 +57,7 @@ builder.Services.AddScoped<UpdateContactCommandHandler>();
 builder.Services.AddScoped<RemoveContactCommandHandler>();
 builder.Services.AddScoped<RemoveContactCommandHandler>();
 
-
+builder.Services.AddApplicationServices(builder.Configuration);
 
 
 builder.Services.AddControllers();
