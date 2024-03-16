@@ -10,9 +10,9 @@ namespace CarBook.Application.Services
 {
 	public static class ServiceRegistiration
 	{
-		public static void AddApplicationServices(this IServiceCollection services,IConfiguration configration)
+		public static void AddApplicationServices(this IServiceCollection services, IConfiguration configration)
 		{
-			services.AddMediatR(cfg=>cfg.RegisterServicesFromAssembly(typeof(ServiceRegistiration).Assembly));
+			services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ServiceRegistiration).Assembly));
 		}
 	}
 }

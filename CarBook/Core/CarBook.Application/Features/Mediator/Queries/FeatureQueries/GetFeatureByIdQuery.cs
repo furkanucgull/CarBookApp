@@ -3,9 +3,9 @@ using MediatR;
 
 namespace CarBook.Application.Features.Mediator.Queries.FeatureQueries
 {
-	public class GetFeatureByIdQuery:IRequest<GetFeatureByIdQueryResult>
+	public class GetFeatureByIdQuery : IRequest<GetFeatureByIdQueryResult>
 	{
-        public int Id { get; set; }
+		public int Id { get; set; }
 
 		public GetFeatureByIdQuery(int id)
 		{
