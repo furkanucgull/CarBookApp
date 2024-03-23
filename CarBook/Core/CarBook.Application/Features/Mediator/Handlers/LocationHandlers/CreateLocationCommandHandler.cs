@@ -1,5 +1,4 @@
-﻿using CarBook.Application.Features.Mediator.Commands.FeatureCommands;
-using CarBook.Application.Features.Mediator.Commands.LocationCommands;
+﻿using CarBook.Application.Features.Mediator.Commands.LocationCommands;
 using CarBook.Application.Interfaces;
 using CarBook.Domain.Entities;
 using MediatR;
