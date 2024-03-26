@@ -5,23 +5,23 @@ using MediatR;
 
 namespace CarBook.Application.Features.Mediator.Handlers.ServicesHandlers
 {
-	public class CreateServicesCommandHandler : IRequestHandler<CreateServicesCommand>
-	{
-		private readonly IRepository<Service> _repository;
-		public CreateServicesCommandHandler(IRepository<Service> repository)
-		{
-			_repository = repository;
-		}
+    public class CreateServicesCommandHandler : IRequestHandler<CreateServicesCommand>
+    {
+        private readonly IRepository<Service> _repository;
+        public CreateServicesCommandHandler(IRepository<Service> repository)
+        {
+            _repository = repository;
+        }
 
-		public async Task Handle(CreateServicesCommand request, CancellationToken cancellationToken)
-		{
-			await _repository.CreateAsync(new Service
-			{
-				Description = request.Description,
-				IconUrl = request.IconUrl,
-				Title = request.Title,
-			});
+        public async Task Handle(CreateServicesCommand request, CancellationToken cancellationToken)
+        {
+            await _repository.CreateAsync(new Service
+            {
+                Description = request.Description,
+                IconUrl = request.IconUrl,
+                Title = request.Title,
+            });
 
-		}
-	}
+        }
+    }
 }
