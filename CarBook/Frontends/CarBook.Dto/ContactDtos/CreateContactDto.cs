@@ -1,8 +1,8 @@
-﻿namespace CarBook.Domain.Entities
+﻿namespace CarBook.Dto.ContactDtos
 {
-    public class Contact
-	{
-        public int ContactID { get; set; }
+    public class CreateContactDto
+    {
+       
         public string Name { get; set; }
         public string Subject { get; set; }
         public string Email { get; set; }

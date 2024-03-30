@@ -17,7 +17,7 @@ namespace CarBook.Web.UI.ViewComponents.FooterAddressViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7262/api/FooterAddresses");
+            var responseMessage = await client.GetAsync("https://localhost:7262/api/FooterAddress");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();

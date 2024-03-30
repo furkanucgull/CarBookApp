@@ -1,6 +1,8 @@
-﻿using CarBook.Dto.FooterAddressDtos;
+﻿using CarBook.Dto.ContactDtos;
+using CarBook.Dto.FooterAddressDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace CarBook.Web.UI.Controllers
 {
@@ -12,16 +14,30 @@ namespace CarBook.Web.UI.Controllers
         {
             _httpClientFactory = httpClientFactory;
         }
-
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
+            //var client = _httpClientFactory.CreateClient();
+            //var responseMessage = await client.GetAsync("https://localhost:7262/api/Contacts");
+            //if (responseMessage.IsSuccessStatusCode)
+            //{
+            //    var jsonData = await responseMessage.Content.ReadAsStringAsync();
+            //    var values = JsonConvert.DeserializeObject<List<ResultFooterAddressDto>>(jsonData);
+            //    return View(values);
+            //}
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Index(CreateContactDto createContactDto)
+        {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7262/api/Contacts");
+            createContactDto.SendDate = DateTime.Now;
+            var jsonData = JsonConvert.SerializeObject(createContactDto);
+            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PostAsync("https://localhost:7262/api/Contacts", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
-                var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultFooterAddressDto>>(jsonData);
-                return View(values);
+                return RedirectToAction("Index", "Default");
             }
             return View();
         }
