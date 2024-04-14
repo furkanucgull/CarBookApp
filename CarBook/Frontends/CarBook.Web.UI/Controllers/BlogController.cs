@@ -28,5 +28,11 @@ namespace CarBook.Web.UI.Controllers
             }
             return View();
         }
+        public async Task<IActionResult> BlogDetail()
+        {
+            ViewBag.v1 = "Blogs";
+            ViewBag.v2 = "Blog Details and Comments";
+            return View();
+        }
     }
 }
