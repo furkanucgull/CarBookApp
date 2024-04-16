@@ -21,12 +21,12 @@ namespace CarBook.Application.Features.Mediator.Handlers.BlogHandlers
             return new GetBlogByIdQueryResult
             {
                 BlogID = values.BlogID,
-                Title = values.Title,
-                CreatedDate = values.CreatedDate,
-                CoverImageUrl = values.CoverImageUrl,
                 AuthorID = values.AuthorID,
                 CategoryID = values.CategoryID,
-
+                CoverImageUrl = values.CoverImageUrl,
+                CreatedDate = values.CreatedDate,
+                Description = values.Description,
+                Title = values.Title
             };
         }
     }
