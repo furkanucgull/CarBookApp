@@ -16,7 +16,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.TagCloudHandlers
 
         public  async Task<List<GetTagCloudByBlogIdQueryResult>> Handle(GetTagCloudByBlogIdQuery request, CancellationToken cancellationToken)
         {
-            var values =  _repository.GetTagCloudsByBlodID(request.Id);
+            var values =  _repository.GetTagCloudsByBlogID(request.Id);
             return values.Select(x => new GetTagCloudByBlogIdQueryResult
             {
                 Title = x.Title,

@@ -47,8 +47,8 @@ namespace CarBook.WebApi.Controllers
             await _meditor.Send(command);
             return Ok("TagCloud Updated Succesfully.");
         }
-        [HttpGet("GetTagCloudByBlodID")]
-        public async Task<IActionResult> GetTagCloudByBlodID(int id)
+        [HttpGet("GetTagCloudByBlogId")]
+        public async Task<IActionResult> GetTagCloudByBlogId(int id)
         {
             var values = await _meditor.Send(new GetTagCloudByBlogIdQuery(id));
             return Ok(values);
