@@ -32,6 +32,7 @@ namespace CarBook.Persistance.Context
 		public DbSet<SocialMedia> SocialMedias { get; set; }
 		public DbSet<Testimonial> Testimonials { get; set; }
 		public DbSet<TagCloud> TagClouds { get; set; }
+		public DbSet<Comment> Comments { get; set; }
 
 	}
 }
