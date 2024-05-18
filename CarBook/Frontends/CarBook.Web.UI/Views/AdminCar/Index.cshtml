@@ -28,6 +28,7 @@
                                         <th>Update</th>
                                         <th>Details</th>
                                         <th>Check on the website</th>
+                                        <th>Billing Information</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -45,7 +46,7 @@
                                             <td><a asp-action="UpdateCar" asp-controller="AdminCar" asp-route-id="@item.CarID" class="btn btn-outline-success">Update</a></td>
                                             <td><a asp-action="Details" asp-controller="AdminCar" asp-route-id="@item.CarID" class="btn btn-outline-dark">Details</a></td>
                                             <td><a asp-action="Details" asp-controller="AdminCar" asp-route-id="@item.CarID" class="btn btn-outline-warning">Check on the website</a></td>
-
+                                            <td><a asp-action="Details" asp-controller="AdminCar" asp-route-id="@item.CarID" class="btn btn-outline-secondary">Billing Information</a></td>
                                         </tr>
                                     }
                                 </tbody>
