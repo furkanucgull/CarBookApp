@@ -35,7 +35,7 @@ namespace CarBook.WebApi.Controllers
             await _meditor.Send(command);
             return Ok("TagCloud Added Succesfully");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveTagCloud(int id)
         {
             await _meditor.Send(new RemoveTagCloudCommand(id));

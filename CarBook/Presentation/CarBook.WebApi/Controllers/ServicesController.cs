@@ -34,7 +34,7 @@ namespace CarBook.WebApi.Controllers
 			await _meditor.Send(command);
 			return Ok("Services Added Succesfully");
 		}
-		[HttpDelete]
+		[HttpDelete("{id}")]
 		public async Task<IActionResult> RemoveServices(int id)
 		{
 			await _meditor.Send(new RemoveServicesCommand(id));

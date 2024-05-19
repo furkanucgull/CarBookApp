@@ -33,7 +33,7 @@ namespace CarBook.WebApi.Controllers
             _commentRepository.Update(comment);
             return Ok("Comment Updated Succesfully!");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult RemoveComment(int id)
         {
             var value =_commentRepository.GetById(id);

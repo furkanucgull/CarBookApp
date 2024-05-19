@@ -4,25 +4,25 @@ using CarBook.Application.Interfaces;
 using CarBook.Domain.Entities;
 using MediatR;
 
-namespace CarBook.Application.Features.Mediator.Handlers.LocationHandlers
+namespace CarBook.Application.Features.Mediator.Handlers.TagCloudHandlers
 {
-	public class CreateTagCloudCommandHandler : IRequestHandler<CreateTagCloudCommand>
-	{
-		private readonly IRepository<TagCloud> _repository;
+    public class CreateTagCloudCommandHandler : IRequestHandler<CreateTagCloudCommand>
+    {
+        private readonly IRepository<TagCloud> _repository;
 
-		public CreateTagCloudCommandHandler(IRepository<TagCloud> repository)
-		{
-			_repository = repository;
-		}
+        public CreateTagCloudCommandHandler(IRepository<TagCloud> repository)
+        {
+            _repository = repository;
+        }
 
-		public async Task Handle(CreateTagCloudCommand request, CancellationToken cancellationToken)
-		{
-			await _repository.CreateAsync(new TagCloud
+        public async Task Handle(CreateTagCloudCommand request, CancellationToken cancellationToken)
+        {
+            await _repository.CreateAsync(new TagCloud
             {
-				Title = request.Title,
-				BlogID = request.BlogID,
-				
-			});
-		}
-	}
+                Title = request.Title,
+                BlogID = request.BlogID,
+
+            });
+        }
+    }
 }

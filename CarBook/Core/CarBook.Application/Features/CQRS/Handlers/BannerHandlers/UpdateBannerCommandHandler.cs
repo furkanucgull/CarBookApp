@@ -12,15 +12,14 @@ namespace CarBook.Application.Features.CQRS.Handlers.BannerHandlers
 		{
 			_repository = repository;
 		}
-		public async Task Handle(UpdateBannerCommand command)
-		{
-			var values = await _repository.GetByIdAsync(command.BannerID);
-			values.Description = command.Description;
-			values.Title = command.Title;
-			values.VideoUrl = command.VideoUrl;
-			values.BannerID	= command.BannerID;
-			
-			await _repository.UpdateAsync(values);
-		}
-	}
+        public async Task Handle(UpdateBannerCommand command)
+        {
+            var values = await _repository.GetByIdAsync(command.BannerID);
+            values.Description = command.Description;
+            values.Title = command.Title;
+            values.VideoUrl = command.VideoUrl;
+            values.VideoDescription = command.VideoDescription;
+            await _repository.UpdateAsync(values);
+        }
+    }
 }

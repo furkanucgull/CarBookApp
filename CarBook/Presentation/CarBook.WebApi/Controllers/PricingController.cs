@@ -33,7 +33,7 @@ namespace CarBook.WebApi.Controllers
 			await _meditor.Send(command);
 			return Ok("Pricing Added Succesfully");
 		}
-		[HttpDelete]
+		[HttpDelete("{id}")]
 		public async Task<IActionResult> RemovePricing(int id)
 		{
 			await _meditor.Send(new RemovePricingCommand(id));

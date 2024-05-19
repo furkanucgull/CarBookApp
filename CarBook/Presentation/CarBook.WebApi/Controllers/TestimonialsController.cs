@@ -34,7 +34,7 @@ namespace CarBook.WebApi.Controllers
             await _meditor.Send(command);
             return Ok("Testimonial Added Succesfully");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveTestimonial(int id)
         {
             await _meditor.Send(new RemoveTestimonialCommand(id));

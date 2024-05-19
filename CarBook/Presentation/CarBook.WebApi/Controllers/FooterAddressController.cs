@@ -34,7 +34,7 @@ namespace CarBook.WebApi.Controllers
 			await _meditor.Send(command);
 			return Ok("FooterAddress Added Succesfully");
 		}
-		[HttpDelete]
+		[HttpDelete("{id}")]
 		public async Task<IActionResult> RemoveFooterAddress(int id)
 		{
 			await _meditor.Send(new RemoveFooterAddressCommand(id));
