@@ -18,7 +18,10 @@
                 <li class="menu-title">Menu</li>
 
                 <li>
-                    <a href="index.html" class="waves-effect"><i class="feather-airplay"></i><span class="badge badge-pill badge-primary float-right">7</span><span>Dashboard</span></a>
+                    <a asp-action="Index" asp-controller="Default" class="waves-effect"><i class="feather-airplay"></i><span class="badge badge-pill badge-primary float-right">7</span><span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a asp-action="Index" asp-controller="Default" class="waves-effect"><i class="fas fa-home"></i><span class="badge badge-pill badge-primary float-right">7</span><span>Go to HomePage</span></a>
                 </li>
                 <li>
                     <a asp-controller="AdminCar" asp-action="Index" class="waves-effect"><i class="fas fa-car"></i><span>Car Transactions</span></a>
@@ -36,7 +39,7 @@
                 </li>
 
                 <li>
-                    <a asp-controller="AdminFeature" asp-action="Index" class="waves-effect"><i class="fas fa-info"></i><span>About Us</span></a>
+                    <a asp-area="Admin" asp-controller="AdminAbout" asp-action="Index" class="waves-effect"><i class="fas fa-info"></i><span>About Us</span></a>
                 </li>
                 <li>
                     <a asp-controller="AdminFeature" asp-action="Index" class="waves-effect"><i class="fas fa-pen"></i><span>Authors</span></a>

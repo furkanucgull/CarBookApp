@@ -1,0 +1,58 @@
+﻿@model List<ResultAboutDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Car About Lists</h4>
+                        <p class="card-subtitle mb-4">
+                            Adding new Abouts
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th>Description</th>
+                                        <th>Image</th>
+                                        <th>Delete</th>
+                                        <th>Create</th>
+                                        <th>Update</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <td>@item.title</td>
+                                            <td>@item.description</td>
+                                            <td>@item.imageUrl</td>
+                                            <td><a asp-area="Admin" asp-action="RemoveAbout" asp-controller="AdminAbout" asp-route-id="@item.aboutID" class="btn btn-outline-danger">Remove</a></td>
+                                            <td><a asp-area="Admin" asp-action="UpdateAbout" asp-controller="AdminAbout" asp-route-id="@item.aboutID" class="btn btn-outline-success">Update</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <td><a asp-action="CreateAbout" asp-controller="AdminAbout" class="btn btn-outline-primary">Create New About</a></td>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
