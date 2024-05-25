@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using System.Text;
-using static System.Net.WebRequestMethods;
 
 namespace CarBook.Web.UI.Controllers
 {

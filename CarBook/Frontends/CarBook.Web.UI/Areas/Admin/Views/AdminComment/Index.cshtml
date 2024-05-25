@@ -1,0 +1,36 @@
+﻿@model List<ResultCommentDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    @foreach (var item in Model)
+                    {
+                        count++;
+                        <div class="col-md-4">
+                            <div class="card">
+                                <h5 class="card-header">Comments - @count</h5>
+                                <div class="card-body">
+                                    <h4 class="card-title">@item.Name</h4>
+                                    <p class="card-text">
+                                        @item.Description
+                                    </p>
+                                    <a asp-area="Admin" asp-controller="AdminComment" asp-action="RemoveComment" class="btn btn-primary waves-effect waves-light">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+

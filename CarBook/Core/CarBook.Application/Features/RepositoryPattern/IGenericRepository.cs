@@ -7,6 +7,7 @@
         void Update(T entity);
         void Remove(T entity);
         T GetById(int id);
+        List<T> GetCommentsByBlogID (int id);
 
     }
 }

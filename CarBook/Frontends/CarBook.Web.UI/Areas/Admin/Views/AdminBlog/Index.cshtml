@@ -1,0 +1,68 @@
+﻿@model List<ResultAllBlogsWithAuthorDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Car Blog Lists</h4>
+                        <p class="card-subtitle mb-4">
+                            Adding new Blogs
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Title</th>
+                                        <th>Author</th>
+                                        <th>Category</th>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Open Blog</th>
+                                        <th>Open Comments</th>
+                                        <th>Delete</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <td>@item.Title</td>
+                                            <td>@item.AuthorName</td>
+                                            <td>@item.CategoryID</td>
+                                            <td>@item.CreatedDate</td>
+                                            <td>@item.Description</td>
+                                            <td><a asp-area="" asp-action="BlogDetail" asp-controller="Blog" asp-route-id="@item.BlogID" class="btn btn-outline-primary">Open Blog</a></td>
+                                            <td><a asp-area="Admin" asp-action="Index" asp-controller="AdminComment" asp-route-id="@item.BlogID" class="btn btn-outline-dark">Comments</a></td>
+                                            <td><a asp-area="Admin" asp-action="RemoveBlog" asp-controller="AdminBlog" asp-route-id="@item.BlogID" class="btn btn-outline-danger">Remove</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <td><a asp-action="CreateBlog" asp-controller="AdminBlog" class="btn btn-outline-primary">Create New Blog</a></td>
+
+                        </div>
+
+                    </div>
+                    <!-- end card-body-->
+                </div>
+                <!-- end card -->
+
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end page title -->
+
+    </div> <!-- container-fluid -->
+</div>
