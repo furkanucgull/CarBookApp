@@ -1,0 +1,59 @@
+﻿@model List<CarBook.Dto.PricingDtos.ResultPricingDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Car Pricing Lists</h4>
+                        <p class="card-subtitle mb-4">
+                            Adding new Pricings
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Remove</th>
+                                        <th>Update</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <td>@item.Name</td>
+                                            <td><a asp-area="Admin" asp-action="RemovePricing" asp-controller="AdminPricing" asp-route-id="@item.PricingID" class="btn btn-outline-danger">Remove</a></td>
+                                            <td><a asp-area="Admin" asp-action="UpdatePricing" asp-controller="AdminPricing" asp-route-id="@item.PricingID" class="btn btn-outline-success">Update</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <td><a asp-action="CreatePricing" asp-controller="AdminPricing" class="btn btn-outline-primary">Create New Pricing</a></td>
+
+                        </div>
+
+                    </div>
+                    <!-- end card-body-->
+                </div>
+                <!-- end card -->
+
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end page title -->
+
+    </div> <!-- container-fluid -->
+</div>
+
