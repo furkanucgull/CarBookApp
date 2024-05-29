@@ -1,0 +1,40 @@
+﻿@model CreateTestimonialDto
+@{
+    ViewData["Title"] = "CreateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Create New Testimonial</h4>
+                        <p class="card-subtitle mb-4">You can add any additional Testimonials from here.</p>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputName">Testimonial Name</label>
+                                <input type="text" asp-for="Name" id="exampleInputName" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName">Testimonial Comment</label>
+                                <textarea rows="5" asp-for="Comment" class="form-control" placeholder="Comment here"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName">Testimonial ImageUrl</label>
+                                <input type="text" asp-for="ImageUrl" id="exampleInputName" />
+                            </div>
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
