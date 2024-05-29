@@ -1,0 +1,59 @@
+﻿@model List<ResultServiceDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Car Service Lists</h4>
+                        <p class="card-subtitle mb-4">
+                            Adding new Services
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th>IconUrl</th>
+                                        <th>ServiceID</th>
+                                        <th>Delete</th>
+                                        <th>Create</th>
+                                        <th>Update</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <td>@item.Title</td>
+                                            <td>@item.Description</td>
+                                            <td>@item.IconUrl</td>
+                                            <td>@item.ServiceID</td>
+                                            <td><a asp-area="Admin" asp-action="RemoveService" asp-controller="AdminService" asp-route-id="@item.ServiceID" class="btn btn-outline-danger">Remove</a></td>
+                                            <td><a asp-area="Admin" asp-action="UpdateService" asp-controller="AdminService" asp-route-id="@item.ServiceID" class="btn btn-outline-success">Update</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <td><a asp-action="CreateService" asp-controller="AdminService" class="btn btn-outline-primary">Create New Service</a></td>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,54 @@
+﻿@model List<ResultLocationDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Car Location Lists</h4>
+                        <p class="card-subtitle mb-4">
+                            Adding new Locations
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Delete</th>
+                                        <th>Create</th>
+                                        <th>Update</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <td>@item.Name</td>
+
+                                            <td><a asp-area="Admin" asp-action="RemoveLocation" asp-controller="AdminLocation" asp-route-id="@item.LocationID" class="btn btn-outline-danger">Remove</a></td>
+                                            <td><a asp-area="Admin" asp-action="UpdateLocation" asp-controller="AdminLocation" asp-route-id="@item.LocationID" class="btn btn-outline-success">Update</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <td><a asp-action="CreateLocation" asp-controller="AdminLocation" class="btn btn-outline-primary">Create New Location</a></td>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

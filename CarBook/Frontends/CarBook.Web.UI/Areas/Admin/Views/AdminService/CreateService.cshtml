@@ -1,0 +1,40 @@
+﻿@model CreateServiceDto
+@{
+    ViewData["Title"] = "CreateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Create New Service</h4>
+                        <p class="card-subtitle mb-4">You can add any additional Services from here.</p>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputName">Service Title</label>
+                                <input type="text" asp-for="Title" id="exampleInputName" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName">Service Description</label>
+                                <input type="text" asp-for="Description" id="exampleInputName" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName">Service VideoUrl</label>
+                                <input type="text" asp-for="IconUrl" id="exampleInputName" />
+                            </div>
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
