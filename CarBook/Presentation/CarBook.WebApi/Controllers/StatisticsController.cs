@@ -46,5 +46,50 @@ namespace CarBook.WebApi.Controllers
             var values = await _mediator.Send(new GetBrandCountQuery());
             return Ok(values);
         }
+        [HttpGet("GetAvgRentPriceForDaily")]
+        public async Task<IActionResult> GetAvgRentPriceForDaily()
+        {
+            var values = await _mediator.Send(new GetAvgRentPriceForDailyQuery());
+            return Ok(values);
+        }
+        [HttpGet("GetAvgRentPriceForMonthly")]
+        public async Task<IActionResult> GetAvgRentPriceForMonthly()
+        {
+            var values = await _mediator.Send(new GetAvgRentPriceForMonthlyQuery());
+            return Ok(values);
+        }
+        [HttpGet("GetAvgRentPriceForWeekly")]
+        public async Task<IActionResult> GetAvgRentPriceForWeekly()
+        {
+            var values = await _mediator.Send(new GetAvgRentPriceForWeeklyQuery());
+            return Ok(values);
+        }
+        [HttpGet("GetCarCountByElectric")]
+        public async Task<IActionResult> GetCarCountByElectric()
+        {
+            var values = await _mediator.Send(new GetCarCountByElectricQuery());
+            return Ok(values);
+        }
+        [HttpGet("GetCarCountByKmLower1000")]
+        public async Task<IActionResult> GetCarCountByKmLower1000()
+        {
+            var values = await _mediator.Send(new GetCarCountByKmLower1000Query());
+            return Ok(values);
+        }
+     
+        [HttpGet("GetCarCountByTransmissionisAuto")]
+        public async Task<IActionResult> GetCarCountByTransmissionisAuto()
+        {
+            var values = await _mediator.Send(new GetCarCountByTransmissionisAutoQuery());
+            return Ok(values);
+        } 
+        [HttpGet("GetCarCountByFuelGasolineOrDiesel")]
+        public async Task<IActionResult> GetCarCountByFuelGasolineOrDiesel()
+        {
+            var values = await _mediator.Send(new GetCarCountByFuelGasolineOrDieselQuery());
+            return Ok(values);
+        }
+
+    
     }
 }

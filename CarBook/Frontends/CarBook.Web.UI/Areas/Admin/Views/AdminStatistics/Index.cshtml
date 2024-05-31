@@ -10,22 +10,22 @@
                 <div class="card bg-primary border-primary">
                     <div class="card-body">
                         <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">Daily</span>
-                            <h5 class="card-title mb-0 text-white">Cost per Unit</h5>
+                            <span class="badge badge-soft-light float-right">Active Cars</span>
+                            <h5 class="card-title mb-0 text-white">Total Number of Cars</h5>
                         </div>
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
                                 <h2 class="d-flex align-items-center mb-0 text-white">
-                                    $17.21
+                                    @ViewBag.v
                                 </h2>
                             </div>
                             <div class="col-4 text-right">
-                                <span class="text-white-50">12.5% <i class="mdi mdi-arrow-up"></i></span>
+                                <span class="text-white-50">@ViewBag.v1% <i class="mdi mdi-arrow-up"></i></span>
                             </div>
                         </div>
 
                         <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v1%;"></div>
                         </div>
                     </div>
                 </div>
@@ -35,22 +35,22 @@
                 <div class="card bg-success border-success">
                     <div class="card-body">
                         <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">Per Week</span>
-                            <h5 class="card-title mb-0 text-white">Market Revenue</h5>
+                            <span class="badge badge-soft-light float-right">Available Locations</span>
+                            <h5 class="card-title mb-0 text-white">No. Of Locations</h5>
                         </div>
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
-                                <h2 class="d-flex align-items-center text-white mb-0">
-                                    $1875.54
-                                </h2>
+                                <h3 class="d-flex align-items-center text-white mb-0">
+                                    @ViewBag.locationCount
+                                </h3>
                             </div>
                             <div class="col-4 text-right">
-                                <span class="text-white-50">18.71% <i class="mdi mdi-arrow-down"></i></span>
+                                <span class="text-white-50">@ViewBag.locationCountRandom % <i class="mdi mdi-arrow-down"></i></span>
                             </div>
                         </div>
 
                         <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.locationCountRandom%"></div>
                         </div>
                     </div>
                 </div>
@@ -60,22 +60,22 @@
                 <div class="card bg-warning border-warning">
                     <div class="card-body">
                         <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">Per Month</span>
-                            <h5 class="card-title mb-0 text-white">Expenses</h5>
+                            <span class="badge badge-soft-light float-right">Active Authors</span>
+                            <h5 class="card-title mb-0 text-white">Total No. of Authors </h5>
                         </div>
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
-                                <h2 class="d-flex align-items-center text-white mb-0">
-                                    $784.62
-                                </h2>
+                                <h3 class="d-flex align-items-center text-white mb-0">
+                                    @ViewBag.authorCount
+                                </h3>
                             </div>
                             <div class="col-4 text-right">
-                                <span class="text-white-50">57% <i class="mdi mdi-arrow-up"></i></span>
+                                <span class="text-white-50">@ViewBag.authorCountRandom% <i class="mdi mdi-arrow-up"></i></span>
                             </div>
                         </div>
 
                         <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 68%;"></div>
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.authorCountRandom%;"></div>
                         </div>
                     </div>
                 </div>
@@ -85,14 +85,216 @@
                 <div class="card bg-info border-info">
                     <div class="card-body">
                         <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">All Time</span>
-                            <h5 class="card-title mb-0 text-white">Daily Visits</h5>
+                            <span class="badge badge-soft-light float-right">Active Blogs</span>
+                            <h5 class="card-title mb-0 text-white">Total Numbers of Blog</h5>
                         </div>
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
-                                <h2 class="d-flex align-items-center text-white mb-0">
-                                    1,15,187
+                                <h3 class="d-flex align-items-center text-white mb-0">
+                                    @ViewBag.blogCount
+                                </h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.blogCountRandom % <i class="mdi mdi-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.blogCountRandom%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-primary border-primary">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Active Brands</span>
+                            <h5 class="card-title mb-0 text-white">Total Brands</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center mb-0 text-white">
+                                    @ViewBag.brandCount
                                 </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.brandCountRandom% <i class="mdi mdi-arrow-up"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.brandCountRandom%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-success border-success">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Per Day</span>
+                            <h5 class="card-title mb-0 text-white">Total Price of  Renting (Avg)</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h3 class="d-flex align-items-center text-white mb-0">
+                                    @ViewBag.avgRentPriceForDailyCount $
+                                </h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.avgRentPriceForDailyCountRandom% <i class="mdi mdi-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.avgRentPriceForDailyCountRandom%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-warning border-warning">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Weekly</span>
+                            <h5 class="card-title mb-0 text-white">Average Rent Prices </h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h3 class="d-flex align-items-center text-white mb-0">
+                                    $@ViewBag.avgRentPriceForWeeklyCount $
+                                </h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.avgRentPriceForWeeklyCountRandom% <i class="mdi mdi-arrow-up"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.avgRentPriceForWeeklyCountRandom%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-info border-info">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Monthly</span>
+                            <h5 class="card-title mb-0 text-white">Average Rent Prices</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h3 class="d-flex align-items-center text-white mb-0">
+                                    @ViewBag.avgRentPriceForMonthlyCount $
+                                </h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.avgRentPriceForMonthlyCountRandom% <i class="mdi mdi-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.avgRentPriceForMonthlyCountRandom%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-primary border-primary">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Transmisson</span>
+                            <h5 class="card-title mb-0 text-white">Total Cars (Automatic)</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center mb-0 text-white">
+                                    @ViewBag.CarCountByTransmissionisAutoCount
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.CarCountByTransmissionisAutoCountRandom% <i class="mdi mdi-arrow-up"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.CarCountByTransmissionisAutoCountRandom%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-success border-success">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right"> Electric</span>
+                            <h5 class="card-title mb-0 text-white">Number of Car Count</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h3 class="d-flex align-items-center text-white mb-0">
+                                    @ViewBag.CarCountByElectricCount
+                                </h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.CarCountByElectricCountRandom% <i class="mdi mdi-arrow-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.CarCountByElectricCountRandom%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-warning border-warning">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Diesel or Gasoline</span>
+                            <h5 class="card-title mb-0 text-white">Car Fuel Type Count</h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h3 class="d-flex align-items-center text-white mb-0">
+                                    @ViewBag.CarCountByFuelGasolineOrDieselCount
+                                </h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span class="text-white-50">@ViewBag.CarCountByFuelGasolineOrDieselCountRandom% <i class="mdi mdi-arrow-up"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.CarCountByFuelGasolineOrDieselCountRandom%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col-->
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card bg-info border-info">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <span class="badge badge-soft-light float-right">Brand Name</span>
+                            <h5 class="card-title mb-0 text-white">With The Most Cars </h5>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col-8">
+                                <h3 class="d-flex align-items-center text-white mb-0">
+                                   Audi
+                                </h3>
                             </div>
                             <div class="col-4 text-right">
                                 <span class="text-white-50">17.8% <i class="mdi mdi-arrow-down"></i></span>
@@ -104,29 +306,29 @@
                         </div>
                     </div>
                 </div>
-            </div> <!-- end col-->
+            </div> <!-- end col ToDo-->
         </div>
         <div class="row">
             <div class="col-md-6 col-xl-3">
                 <div class="card bg-primary border-primary">
                     <div class="card-body">
                         <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">Daily</span>
-                            <h5 class="card-title mb-0 text-white">Cost per Unit</h5>
+                            <span class="badge badge-soft-light float-right">KM < <span>1000</span></span>
+                            <h5 class="card-title mb-0 text-white">Car Count </h5>
                         </div>
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
                                 <h2 class="d-flex align-items-center mb-0 text-white">
-                                    $17.21
+                                    @ViewBag.CarCountByKmLower1000Count
                                 </h2>
                             </div>
                             <div class="col-4 text-right">
-                                <span class="text-white-50">12.5% <i class="mdi mdi-arrow-up"></i></span>
+                                <span class="text-white-50">@ViewBag.CarCountByKmLower1000CountRandom% <i class="mdi mdi-arrow-up"></i></span>
                             </div>
                         </div>
 
                         <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.CarCountByKmLower1000CountRandom%;"></div>
                         </div>
                     </div>
                 </div>
@@ -136,14 +338,14 @@
                 <div class="card bg-success border-success">
                     <div class="card-body">
                         <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">Per Week</span>
-                            <h5 class="card-title mb-0 text-white">Market Revenue</h5>
+                            <span class="badge badge-soft-light float-right">Blog</span>
+                            <h5 class="card-title mb-0 text-white"> With The Most Comments</h5>
                         </div>
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
-                                <h2 class="d-flex align-items-center text-white mb-0">
-                                    $1875.54
-                                </h2>
+                                <h3 class="d-flex align-items-center text-white mb-0">
+                                    Blog 2
+                                </h3>
                             </div>
                             <div class="col-4 text-right">
                                 <span class="text-white-50">18.71% <i class="mdi mdi-arrow-down"></i></span>
@@ -161,17 +363,17 @@
                 <div class="card bg-warning border-warning">
                     <div class="card-body">
                         <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">Per Month</span>
-                            <h5 class="card-title mb-0 text-white">Expenses</h5>
+                            <span class="badge badge-soft-light float-right">Daily Rent Cost</span>
+                            <h5 class="card-title mb-0 text-white">Most Expensive Car</h5>
                         </div>
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
-                                <h2 class="d-flex align-items-center text-white mb-0">
-                                    $784.62
-                                </h2>
+                                <h3 class="d-flex align-items-center text-white mb-0">
+                                    Audi - A6
+                                </h3>
                             </div>
                             <div class="col-4 text-right">
-                                <span class="text-white-50">57% <i class="mdi mdi-arrow-up"></i></span>
+                                <span class="text-white-50">27% <i class="mdi mdi-arrow-up"></i></span>
                             </div>
                         </div>
 
@@ -186,216 +388,14 @@
                 <div class="card bg-info border-info">
                     <div class="card-body">
                         <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">All Time</span>
-                            <h5 class="card-title mb-0 text-white">Daily Visits</h5>
+                            <span class="badge badge-soft-light float-right">Daily Rent Cost</span>
+                            <h5 class="card-title mb-0 text-white">Cheapest Car</h5>
                         </div>
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
-                                <h2 class="d-flex align-items-center text-white mb-0">
-                                    1,15,187
-                                </h2>
-                            </div>
-                            <div class="col-4 text-right">
-                                <span class="text-white-50">17.8% <i class="mdi mdi-arrow-down"></i></span>
-                            </div>
-                        </div>
-
-                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 57%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end col-->
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-xl-3">
-                <div class="card bg-primary border-primary">
-                    <div class="card-body">
-                        <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">Daily</span>
-                            <h5 class="card-title mb-0 text-white">Cost per Unit</h5>
-                        </div>
-                        <div class="row d-flex align-items-center mb-4">
-                            <div class="col-8">
-                                <h2 class="d-flex align-items-center mb-0 text-white">
-                                    $17.21
-                                </h2>
-                            </div>
-                            <div class="col-4 text-right">
-                                <span class="text-white-50">12.5% <i class="mdi mdi-arrow-up"></i></span>
-                            </div>
-                        </div>
-
-                        <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end col-->
-
-            <div class="col-md-6 col-xl-3">
-                <div class="card bg-success border-success">
-                    <div class="card-body">
-                        <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">Per Week</span>
-                            <h5 class="card-title mb-0 text-white">Market Revenue</h5>
-                        </div>
-                        <div class="row d-flex align-items-center mb-4">
-                            <div class="col-8">
-                                <h2 class="d-flex align-items-center text-white mb-0">
-                                    $1875.54
-                                </h2>
-                            </div>
-                            <div class="col-4 text-right">
-                                <span class="text-white-50">18.71% <i class="mdi mdi-arrow-down"></i></span>
-                            </div>
-                        </div>
-
-                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end col-->
-
-            <div class="col-md-6 col-xl-3">
-                <div class="card bg-warning border-warning">
-                    <div class="card-body">
-                        <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">Per Month</span>
-                            <h5 class="card-title mb-0 text-white">Expenses</h5>
-                        </div>
-                        <div class="row d-flex align-items-center mb-4">
-                            <div class="col-8">
-                                <h2 class="d-flex align-items-center text-white mb-0">
-                                    $784.62
-                                </h2>
-                            </div>
-                            <div class="col-4 text-right">
-                                <span class="text-white-50">57% <i class="mdi mdi-arrow-up"></i></span>
-                            </div>
-                        </div>
-
-                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 68%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end col-->
-
-            <div class="col-md-6 col-xl-3">
-                <div class="card bg-info border-info">
-                    <div class="card-body">
-                        <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">All Time</span>
-                            <h5 class="card-title mb-0 text-white">Daily Visits</h5>
-                        </div>
-                        <div class="row d-flex align-items-center mb-4">
-                            <div class="col-8">
-                                <h2 class="d-flex align-items-center text-white mb-0">
-                                    1,15,187
-                                </h2>
-                            </div>
-                            <div class="col-4 text-right">
-                                <span class="text-white-50">17.8% <i class="mdi mdi-arrow-down"></i></span>
-                            </div>
-                        </div>
-
-                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 57%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end col-->
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-xl-3">
-                <div class="card bg-primary border-primary">
-                    <div class="card-body">
-                        <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">Daily</span>
-                            <h5 class="card-title mb-0 text-white">Cost per Unit</h5>
-                        </div>
-                        <div class="row d-flex align-items-center mb-4">
-                            <div class="col-8">
-                                <h2 class="d-flex align-items-center mb-0 text-white">
-                                    $17.21
-                                </h2>
-                            </div>
-                            <div class="col-4 text-right">
-                                <span class="text-white-50">12.5% <i class="mdi mdi-arrow-up"></i></span>
-                            </div>
-                        </div>
-
-                        <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end col-->
-
-            <div class="col-md-6 col-xl-3">
-                <div class="card bg-success border-success">
-                    <div class="card-body">
-                        <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">Per Week</span>
-                            <h5 class="card-title mb-0 text-white">Market Revenue</h5>
-                        </div>
-                        <div class="row d-flex align-items-center mb-4">
-                            <div class="col-8">
-                                <h2 class="d-flex align-items-center text-white mb-0">
-                                    $1875.54
-                                </h2>
-                            </div>
-                            <div class="col-4 text-right">
-                                <span class="text-white-50">18.71% <i class="mdi mdi-arrow-down"></i></span>
-                            </div>
-                        </div>
-
-                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end col-->
-
-            <div class="col-md-6 col-xl-3">
-                <div class="card bg-warning border-warning">
-                    <div class="card-body">
-                        <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">Per Month</span>
-                            <h5 class="card-title mb-0 text-white">Expenses</h5>
-                        </div>
-                        <div class="row d-flex align-items-center mb-4">
-                            <div class="col-8">
-                                <h2 class="d-flex align-items-center text-white mb-0">
-                                    $784.62
-                                </h2>
-                            </div>
-                            <div class="col-4 text-right">
-                                <span class="text-white-50">57% <i class="mdi mdi-arrow-up"></i></span>
-                            </div>
-                        </div>
-
-                        <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 68%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end col-->
-
-            <div class="col-md-6 col-xl-3">
-                <div class="card bg-info border-info">
-                    <div class="card-body">
-                        <div class="mb-4">
-                            <span class="badge badge-soft-light float-right">All Time</span>
-                            <h5 class="card-title mb-0 text-white">Daily Visits</h5>
-                        </div>
-                        <div class="row d-flex align-items-center mb-4">
-                            <div class="col-8">
-                                <h2 class="d-flex align-items-center text-white mb-0">
-                                    1,15,187
-                                </h2>
+                                <h3 class="d-flex align-items-center text-white mb-0">
+                                    Renault - Clio
+                                </h3>
                             </div>
                             <div class="col-4 text-right">
                                 <span class="text-white-50">17.8% <i class="mdi mdi-arrow-down"></i></span>

@@ -4,7 +4,7 @@ using MediatR;
 
 namespace CarBook.Application.Features.Mediator.Handlers.StatisticsHandlers
 {
-    internal class GetBlogCountQueryHandler : IRequestHandler<GetBlogCountQuery, GetBlogCountQueryResult>
+    public class GetBlogCountQueryHandler : IRequestHandler<GetBlogCountQuery, GetBlogCountQueryResult>
     {
         private readonly IStatisticsRepository _repository;
 

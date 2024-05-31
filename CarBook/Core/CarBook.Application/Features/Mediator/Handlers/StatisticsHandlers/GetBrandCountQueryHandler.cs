@@ -5,7 +5,7 @@ using MediatR;
 
 namespace CarBook.Application.Features.Mediator.Handlers.StatisticsHandlers
 {
-    internal class GetBrandCountQueryHandler : IRequestHandler<GetBrandCountQuery, GetBrandCountQueryResult>
+    public class GetBrandCountQueryHandler : IRequestHandler<GetBrandCountQuery, GetBrandCountQueryResult>
     {
         private readonly IStatisticsRepository _repository;
 
