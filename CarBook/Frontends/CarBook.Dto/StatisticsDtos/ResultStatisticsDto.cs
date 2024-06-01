@@ -14,6 +14,12 @@
         public int carCountByKmLower1000 { get; set; }
         public int carCountByTransmissionisAuto { get; set; }
         public int carCountByFuelGasolineOrDiesel { get; set; }
+        public string BlogTitleByMaxBlogCommentQueryResult { get; set; }
+        public string BrandNameByMaxCar { get; set; }
+        public string CarBrandAndModelByRentPriceDailyMax { get; set; }
+        public string CarBrandAndModelByRentPriceDailyMin { get; set; }
+
+      
         
     }
 }

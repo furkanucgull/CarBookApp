@@ -142,7 +142,7 @@
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
                                 <h3 class="d-flex align-items-center text-white mb-0">
-                                    @ViewBag.avgRentPriceForDailyCount $
+                                    @ViewBag.avgRentPriceForDailyCount €
                                 </h3>
                             </div>
                             <div class="col-4 text-right">
@@ -167,7 +167,7 @@
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
                                 <h3 class="d-flex align-items-center text-white mb-0">
-                                    $@ViewBag.avgRentPriceForWeeklyCount $
+                                    €@ViewBag.avgRentPriceForWeeklyCount €
                                 </h3>
                             </div>
                             <div class="col-4 text-right">
@@ -192,7 +192,7 @@
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
                                 <h3 class="d-flex align-items-center text-white mb-0">
-                                    @ViewBag.avgRentPriceForMonthlyCount $
+                                    @ViewBag.avgRentPriceForMonthlyCount €
                                 </h3>
                             </div>
                             <div class="col-4 text-right">
@@ -293,16 +293,16 @@
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
                                 <h3 class="d-flex align-items-center text-white mb-0">
-                                   Audi
+                                    @ViewBag.BrandNameByMaxCar
                                 </h3>
                             </div>
                             <div class="col-4 text-right">
-                                <span class="text-white-50">17.8% <i class="mdi mdi-arrow-down"></i></span>
+                                <span class="text-white-50">@ViewBag.BrandNameByMaxCarCount% <i class="mdi mdi-arrow-down"></i></span>
                             </div>
                         </div>
 
                         <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 57%;"></div>
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.BrandNameByMaxCarCount%;"></div>
                         </div>
                     </div>
                 </div>
@@ -343,17 +343,17 @@
                         </div>
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
-                                <h3 class="d-flex align-items-center text-white mb-0">
-                                    Blog 2
-                                </h3>
+                                <h5 class="d-flex align-items-center text-white mb-0">
+                                    @ViewBag.BlogTitleByMaxBlogCommentCount
+                                </h5>
                             </div>
                             <div class="col-4 text-right">
-                                <span class="text-white-50">18.71% <i class="mdi mdi-arrow-down"></i></span>
+                                <span class="text-white-50">@ViewBag.BlogTitleByMaxBlogCommentCountRandom % <i class="mdi mdi-arrow-down"></i></span>
                             </div>
                         </div>
 
                         <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.BlogTitleByMaxBlogCommentCountRandom%;"></div>
                         </div>
                     </div>
                 </div>
@@ -368,24 +368,23 @@
                         </div>
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
-                                <h3 class="d-flex align-items-center text-white mb-0">
-                                    Audi - A6
-                                </h3>
+                                <h4 class="d-flex align-items-center text-white mb-0">
+                                    @ViewBag.CarBrandAndModelByRentPriceDailyMax
+                                </h4>
                             </div>
                             <div class="col-4 text-right">
-                                <span class="text-white-50">27% <i class="mdi mdi-arrow-up"></i></span>
+                                <span class="text-white-50">@ViewBag.CarBrandAndModelByRentPriceDailyMaxtCountRandom% <i class="mdi mdi-arrow-up"></i></span>
                             </div>
                         </div>
 
                         <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 68%;"></div>
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.CarBrandAndModelByRentPriceDailyMaxtCountRandom%;"></div>
                         </div>
                     </div>
                 </div>
             </div> <!-- end col-->
-
             <div class="col-md-6 col-xl-3">
-                <div class="card bg-info border-info">
+                <div class="card bg-warning border-warning">
                     <div class="card-body">
                         <div class="mb-4">
                             <span class="badge badge-soft-light float-right">Daily Rent Cost</span>
@@ -393,21 +392,22 @@
                         </div>
                         <div class="row d-flex align-items-center mb-4">
                             <div class="col-8">
-                                <h3 class="d-flex align-items-center text-white mb-0">
-                                    Renault - Clio
-                                </h3>
+                                <h4 class="d-flex align-items-center text-white mb-0">
+                                    @ViewBag.CarBrandAndModelByRentPriceDailyMin
+                                </h4>
                             </div>
                             <div class="col-4 text-right">
-                                <span class="text-white-50">17.8% <i class="mdi mdi-arrow-down"></i></span>
+                                <span class="text-white-50">@ViewBag.CarBrandAndModelByRentPriceDailyMinCountRandom% <i class="mdi mdi-arrow-up"></i></span>
                             </div>
                         </div>
 
                         <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                            <div class="progress-bar bg-light" role="progressbar" style="width: 57%;"></div>
+                            <div class="progress-bar bg-light" role="progressbar" style="width:@ViewBag.CarBrandAndModelByRentPriceDailyMinCountRandom%;"></div>
                         </div>
                     </div>
                 </div>
-            </div> <!-- end col-->
+            </div>
+            
         </div>
         
 

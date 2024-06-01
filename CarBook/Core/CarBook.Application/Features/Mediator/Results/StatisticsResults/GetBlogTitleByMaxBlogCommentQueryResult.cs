@@ -2,6 +2,6 @@
 {
     public class GetBlogTitleByMaxBlogCommentQueryResult
     {
-        public int BlogTitleByMaxBlogCommentQueryResult { get; set; }
+        public string BlogTitleByMaxBlogCommentQueryResult { get; set; }
     }
 }
