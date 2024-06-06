@@ -1,0 +1,73 @@
+﻿<section class="ftco-section ftco-no-pt bg-light">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-md-12	featured-top">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <form method="post" class="request-form ftco-animate bg-primary">
+                            <h2>Book Your Car Now! </h2>
+                            <div class="form-group">
+                                <label for="" class="label">Renting Location</label>
+                                @* @Html.DropDownListFor(x => x.LocationID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control", @id = "drop" }) *@
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="form-group mr-2">
+                                    <label for="" class="label">Renting Date</label>
+                                    <input type="text" class="form-control" name="book_pick_date" id="book_pick_date" placeholder="Choose a Renting Date">
+                                </div>
+                                <div class="form-group ml-2">
+                                    <label for="" class="label">Date of Giving Back</label>
+                                    <input type="text" class="form-control" name="book_off_date" id="book_off_date" placeholder="Choose a Giving Back Date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="label">Renting Time</label>
+                                <input type="text" class="form-control" name="time_pick" id="time_pick" placeholder="Choose a Renting Time">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="label">Return Time</label>
+                                <input type="text" class="form-control" name="time_off" id="time_pick" placeholder="Choose a Return Time">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-secondary py-3 px-4">Uygun Araçları Listele</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center">
+                        <div class="services-wrap rounded-right w-100">
+                            <h3 class="heading-section mb-4">Easiest Way to Renting</h3>
+                            <div class="row d-flex mb-4">
+                                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                                    <div class="services w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+                                        <div class="text w-100">
+                                            <h3 class="heading mb-2">Choose a Location to Pick the Car</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                                    <div class="services w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-handshake"></span></div>
+                                        <div class="text w-100">
+                                            <h3 class="heading mb-2">See the Most Available Vehicles</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                                    <div class="services w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-rent"></span></div>
+                                        <div class="text w-100">
+                                            <h3 class="heading mb-2">Complete the Rental, That's All!</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p><a href="/CarPricing/Index/" class="btn btn-primary py-3 px-4">See Our Vehicle Price List</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
